@@ -1,0 +1,19 @@
+name: CI for Train
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v3
+
+      - name: Docker Build
+        run: echo docker build
+
+      - name: Docker Push
+        run: echo docker push
+
+      - name: Update Version
+        run: echo update version
