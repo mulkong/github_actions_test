@@ -17,8 +17,8 @@ jobs:
         uses: docker/login-action@v1
         with:
           registry: zepetoent-registry.ap-northeast-1.cr.aliyuncs.com # Alibaba Cloud Container Registry 주소 입력
-          username: trustsafety@openapi # Alibaba Cloud 계정의 사용자 이름
-          password: ${{ secrets.ACCESS_KEY_SECRET }} # Alibaba Cloud 계정의 액세스 키
+          username: ${{ secrets.ALI_REGISTRY_USERNAME } # Alibaba Cloud 계정의 사용자 이름
+          password: ${{ secrets.ALI_REGISTRY_PASSWORD }} # Alibaba Cloud 계정의 액세스 키
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v2
